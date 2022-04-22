@@ -1,7 +1,6 @@
 * {
-    --widgetWidth: 320px;
-    --widgetHeight: 40px;
-    --padding: 1px;
+    --widgetHeight: 12.5vw;
+    --padding: 0.5vw;
 }
 
 body
@@ -19,9 +18,10 @@ body
     grid-template-columns: 3fr 1fr 2fr 2fr 2fr;
     grid-template-rows: 50% 50%;
 
-    width: var(--widgetWidth);
+    width: 100vw;
     height: var(--widgetHeight);
     background-color: #222222;
+    overflow: hidden;
 }
 
 #container > * {
