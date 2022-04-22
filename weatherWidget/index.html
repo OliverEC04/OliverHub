@@ -1,4 +1,19 @@
-<body style="margin: 0;">
-    <div id="openweathermap-widget-19" style="background-color: gray; width: 100%;"></div>
-    <script>window.myWidgetParam ? window.myWidgetParam : window.myWidgetParam = []; window.myWidgetParam.push({ id: 19, cityid: '2617463', appid: 'a747d8d4db264ab04524b75c40b0f2c1', units: 'metric', containerid: 'openweathermap-widget-19', }); (function () { var script = document.createElement('script'); script.async = true; script.charset = "utf-8"; script.src = "//openweathermap.org/themes/openweathermap/assets/vendor/owm/js/weather-widget-generator.js"; var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(script, s); })();</script>
-</body>
+<html>
+    <head>
+        <title>Ugelbølle Weather Widget</title>
+        <link rel="stylesheet" href="main.css">
+    </head>
+    <body>
+        <div id="container">
+            <p id="city">Ugelbølle</p>
+            <p id="subtitle">Vejr</p>
+            <img id="icon">
+            <p id="tempNow">00°</p>
+            <p id="tempHigh">00°</p>
+            <p id="tempLow">00°</p>
+            <p id="downfall">00 %</p>
+            <p id="wind">00 km/t</p>
+        </div>
+        <script src="script.js"></script>
+    </body>
+</html>
