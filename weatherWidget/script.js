@@ -7,6 +7,7 @@ async function updateWidget() {
     console.log(data);
 
     document.querySelector('#icon').src = `http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@2x.png`;
+    document.querySelector('#icon').alt = `${data.daily[0].weather[0].main}`;
     document.querySelector('#tempNow').innerText = `${Math.round(data.current.temp - 273.15)}°`;
     document.querySelector('#tempHigh').innerText = `${Math.round(data.daily[0].temp.max - 273.15)}° ↑`;
     document.querySelector('#tempLow').innerText = `${Math.round(data.daily[0].temp.min - 273.15)}° ↓`;
