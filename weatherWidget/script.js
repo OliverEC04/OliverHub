@@ -6,6 +6,7 @@ async function updateWidget() {
     let data = await owmOneCall('56.307301', '10.414130', 'a747d8d4db264ab04524b75c40b0f2c1');
     console.log(data);
 
+    document.querySelector('#container').style.backgroundImage = `url(assets/backgrounds/${data.current.weather[0].icon}.png)`;
     document.querySelector('#icon').src = `http://openweathermap.org/img/wn/${data.daily[0].weather[0].icon}@2x.png`;
     document.querySelector('#icon').alt = `${data.daily[0].weather[0].main}`;
     document.querySelector('#tempNow').innerText = `${Math.round(data.current.temp - 273.15)}°`;
