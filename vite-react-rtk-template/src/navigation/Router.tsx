@@ -1,10 +1,23 @@
 import {Route, Routes} from "react-router-dom";
-import {pagesData, routerType} from "./pagesData.tsx";
+import {Layout} from "./Layout.tsx";
+import {Home} from "../pages/Home.tsx";
+import {About} from "../pages/About.tsx";
+import {routes} from "./appRoutes.ts";
 
 export const Router = () => {
-    const pageRoutes = pagesData.map(({ path, title, element }: routerType) => {
-        return <Route key={title} path={`/${path}`} element={element} />;
-    });
-
-    return <Routes>{pageRoutes}</Routes>;
+    return <Routes>
+        <Route
+            path={routes.home}
+            element={<Layout/>}
+        >
+            <Route
+                index
+                element={<Home/>}
+            />
+            <Route
+                path={routes.about}
+                element={<About/>}
+            />
+        </Route>
+    </Routes>;
 };
