@@ -4,6 +4,8 @@
   let name = $state("");
   let greetMsg = $state("");
 
+  const text = $state("");
+
   async function greet(event: Event) {
     event.preventDefault();
     // Learn more about Tauri commands at https://tauri.app/develop/calling-rust/
